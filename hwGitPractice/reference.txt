@@ -1,0 +1,6 @@
+add
+clone
+checkout
+reset
+commit -m
+--config
