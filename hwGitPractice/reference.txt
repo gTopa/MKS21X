@@ -2,4 +2,4 @@ add-adds file to staging area
 clone-creates clone of repository on machine
 reset-goes back to an earlier commit
 commit -m "message"-commits changes in staging area to git
-push-saves all changes to git
+push-pushes filse out of computer onto paper
