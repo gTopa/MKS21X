@@ -1,6 +1,5 @@
-add
-clone
-checkout
-reset
-commit -m
+add-adds file to staging area
+clone-creates clone of repository on machine
+reset-goes back to an earlier commit
+commit -m "message"-commits changes in staging area to git
 --config
