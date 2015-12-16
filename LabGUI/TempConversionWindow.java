@@ -2,12 +2,12 @@ import javax.swing.*;
 import java.awt.*;//NEW STUFF!
 import java.awt.event.*;
 
-public class Window3 extends JFrame implements ActionListener{
+public class TempConversionWindow extends JFrame implements ActionListener{
     private Container pane;
     private JLabel j;
     private JTextField t;
 
-    public Window3() {
+    public TempConversionWindow() {
 	this.setTitle("My first GUI");
 	this.setSize(600,400);
 	this.setLocation(100,100);
@@ -36,6 +36,7 @@ public class Window3 extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent e){
 	String event = e.getActionCommand();
+	j.setText("Answer: ");
 	if(event.equals("toC")){
 	    String s = j.getText();
 	    s += (Integer.parseInt(t.getText())-32)*5/9.0;

@@ -27,9 +27,7 @@ public class Window3 extends JFrame implements ActionListener{
 
 	t = new JTextField(10);
 
-	JCheckBox c = new JCheckBox("OverClock");
-	j = new JLabel("Meaning of life is... ");
-	pane.add(c);
+	j = new JLabel("Answer: ");
 	pane.add(t);
 	pane.add(b);
 	pane.add(b2);
@@ -38,16 +36,15 @@ public class Window3 extends JFrame implements ActionListener{
 
     public void actionPerformed(ActionEvent e){
 	String event = e.getActionCommand();
-	if(event.equals("Byte")){
-	    String s = t.getText();
-	    s += "-0101000";
+	if(event.equals("toC")){
+	    String s = j.getText();
+	    s += (Integer.parseInt(t.getText())-32)*5/9.0;
 	    j.setText(s);
 	}
-	if(event.equals("NotByte")){
-	    j.setText("Fish");
-    
+	if(event.equals("toF")){
+	    String s = j.getText();
+	    s += Integer.parseInt(t.getText())*9/5.0+32;
+	    j.setText(s);
 	}
- 
- 
     }
 }
