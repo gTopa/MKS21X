@@ -48,8 +48,8 @@ public class TempConversionWindow extends JFrame implements ActionListener{
 		s += Integer.parseInt(t.getText())*9/5.0+32;
 		j.setText(s);
 	    }
-	}catch(NumberFormatException e){
-	    System.out.println("Please enter a valid number");
+	}catch(NumberFormatException f){
+	    t.setText("Please enter a valid number");
 	}
     }
 }
