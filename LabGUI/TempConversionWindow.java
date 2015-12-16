@@ -37,15 +37,19 @@ public class TempConversionWindow extends JFrame implements ActionListener{
     public void actionPerformed(ActionEvent e){
 	String event = e.getActionCommand();
 	j.setText("Answer: ");
-	if(event.equals("toC")){
-	    String s = j.getText();
-	    s += (Integer.parseInt(t.getText())-32)*5/9.0;
-	    j.setText(s);
-	}
-	if(event.equals("toF")){
-	    String s = j.getText();
-	    s += Integer.parseInt(t.getText())*9/5.0+32;
-	    j.setText(s);
+	try{
+	    if(event.equals("toC")){
+		String s = j.getText();
+		s += (Integer.parseInt(t.getText())-32)*5/9.0;
+		j.setText(s);
+	    }
+	    if(event.equals("toF")){
+		String s = j.getText();
+		s += Integer.parseInt(t.getText())*9/5.0+32;
+		j.setText(s);
+	    }
+	}catch(NumberFormatException e){
+	    System.out.println("Please enter a valid number");
 	}
     }
 }
