@@ -9,33 +9,18 @@ public class BarCode implements Comparable{
     //postcondition: throws a runtime exception zip is not the correct length
     //               or zip contains a non digit
     //               _zip and _checkDigit are initialized.
-    public BarCode(String zip) {
-	_zip=zip;
-	_checkDigit=checkSum();
-    }
+	public BarCode(String zip) {}
 
     // postcondition: Creates a copy of a bar code.
     public BarCode(BarCode x){}
 
 
     //post: computes and returns the check sum for _zip
-    private int checkSum(){
-	int sum=0;
-	for (int i=0;i<_zip.length();i++){
-	    sum+=_zip.charAt(i);
-	}
-	_checkDigit=sum%10;
-    }
+    private int checkSum(){}
 
     //postcondition: format zip + check digit + barcode 
     //ex. "084518  |||:::|::|::|::|:|:|::::|||::|:|"      
-    public String toString(){
-	String out=_zip+_checkDigit+"   ";
-	for (int i=0;i<zip.length();i++){
-	    out+=key[_zip.charAt(i)];
-	}
-	return out;
-    }
+    public String toString(){}
 
 
     public boolean equals(Object other){}
