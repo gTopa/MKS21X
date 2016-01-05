@@ -44,11 +44,29 @@ public class Sorts{
 	    printArray(data);
 	}
     }
+    public static void bubbleSort(int[] data){
+	int i=0;
+	int temp=0;
+	while (i<data.length-2){
+	    for(int pos=0;pos<data.length-i-1;pos++){
+		if (data[pos]>data[pos+1]){
+		    temp=data[pos];
+		    data[pos]=data[pos+1];
+		    data[pos+1]=temp;
+		}
+	    }
+	    i++;
+	    printArray(data);
+	}
+    }
     public static void main(String[]args){
-	int[] t1 = new int[] {1,2,9,7,8,0,0,2};
-	int[] t2 = new int[] {1,2,9,7,8,0,0,2};
+	int[] t1 = new int[] {1,2,9,7,8,0,2};
+	int[] t2 = new int[] {1,2,9,7,8,0,2};
+	int[] t3 = new int[] {1,2,9,7,8,0,2};
 	selectionSort(t1);
 	System.out.println();
 	insertionSort(t2);
+	System.out.println();
+	bubbleSort(t3);
     }
 }
