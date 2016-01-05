@@ -10,11 +10,12 @@ public class Sorts{
 	    System.out.println(out.substring(0,out.length()-2)+"]");
 	}
     }
-    public static void insertion(int[] data){
+    public static void insertionSort(int[] data){
 	int temp=0;
 	for(int i=1;i<data.length;i++){
 	    temp=data[i];
 	    data[shift(i,data)]=temp;
+	    printArray(data);
 	}
     }
     public static int shift(int pos, int[] data){
@@ -28,8 +29,8 @@ public class Sorts{
 	}
 	return 0;
     }
-    public static void selection(int[] data){
-	for (int start=0;start<data.length;start++){
+    public static void selectionSort(int[] data){
+	for (int start=0;start<data.length-1;start++){
 	    int min=Integer.MAX_VALUE;
 	    int pos=0;
 	    for (int i=start;i<data.length;i++){
@@ -40,11 +41,14 @@ public class Sorts{
 	    }
 	    data[pos]=data[start];
 	    data[start]=min;
+	    printArray(data);
 	}
     }
     public static void main(String[]args){
 	int[] t1 = new int[] {1,2,9,7,8,0,0,2};
-	selection(t1);
-	printArray(t1);
+	int[] t2 = new int[] {1,2,9,7,8,0,0,2};
+	selectionSort(t1);
+	System.out.println();
+	insertionSort(t2);
     }
 }
