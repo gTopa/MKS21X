@@ -29,10 +29,17 @@ public class Sorts{
 	return 0;
     }
     public static void selection(int[] data){
-	int min=Integer.maxInt();
 	for (int start=0;start<data.length();start++){
+	    int min=Integer.maxInt();
+	    int pos=0;
 	    for (int i=0;i<data.length();i++){
+		if(data[i]<min){
+		    min=data[i];
+		    pos=i;
+		}
 	    }
+	    data[pos]=data[start];
+	    data[start]=min;
 	}
     }
 }

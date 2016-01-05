@@ -10,7 +10,7 @@ public class Sorts{
 	    System.out.println(out.substring(0,out.length()-2)+"]");
 	}
     }
-    public static void insertionSort(int[] data){
+    public static void insertion(int[] data){
 	int temp=0;
 	for(int i=1;i<data.length;i++){
 	    temp=data[i];
@@ -27,5 +27,12 @@ public class Sorts{
 	    }
 	}
 	return 0;
+    }
+    public static void selection(int[] data){
+	int min=Integer.maxInt();
+	for (int start=0;start<data.length();start++){
+	    for (int i=0;i<data.length();i++){
+	    }
+	}
     }
 }
