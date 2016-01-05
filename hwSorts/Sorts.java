@@ -29,10 +29,10 @@ public class Sorts{
 	return 0;
     }
     public static void selection(int[] data){
-	for (int start=0;start<data.length();start++){
-	    int min=Integer.maxInt();
+	for (int start=0;start<data.length;start++){
+	    int min=Integer.MAX_VALUE;
 	    int pos=0;
-	    for (int i=0;i<data.length();i++){
+	    for (int i=start;i<data.length;i++){
 		if(data[i]<min){
 		    min=data[i];
 		    pos=i;
@@ -41,5 +41,10 @@ public class Sorts{
 	    data[pos]=data[start];
 	    data[start]=min;
 	}
+    }
+    public static void main(String[]args){
+	int[] t1 = new int[] {1,2,9,7,8,0,0,2};
+	selection(t1);
+	printArray(t1);
     }
 }
