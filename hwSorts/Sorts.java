@@ -15,7 +15,7 @@ public class Sorts{
 	for(int i=1;i<data.length;i++){
 	    temp=data[i];
 	    data[shift(i,data)]=temp;
-	    printArray(data);
+	    //printArray(data);
 	}
     }
     public static int shift(int pos, int[] data){
@@ -41,7 +41,7 @@ public class Sorts{
 	    }
 	    data[pos]=data[start];
 	    data[start]=min;
-	    printArray(data);
+	    // printArray(data);
 	}
     }
     public static void bubbleSort(int[] data){
@@ -56,17 +56,17 @@ public class Sorts{
 		}
 	    }
 	    i++;
-	    printArray(data);
+	    //printArray(data);
 	}
     }
-    public static void main(String[]args){
-	int[] t1 = new int[] {1,2,9,7,8,0,2};
-	int[] t2 = new int[] {1,2,9,7,8,0,2};
-	int[] t3 = new int[] {1,2,9,7,8,0,2};
-	selectionSort(t1);
-	System.out.println();
-	insertionSort(t2);
-	System.out.println();
-	bubbleSort(t3);
+    public static void fillRandom(int[] ary){
+	for (int i=0;i<ary.length;i++){
+	    ary[i]=(int)(Math.random()*Integer.MAX_VALUE);
+	}
+    }
+    public static void swap(int[] ary, int i, int a){
+	int temp=ary[i];
+	ary[i]=ary[a];
+	ary[a]=temp;
     }
 }
